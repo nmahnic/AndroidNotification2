@@ -24,6 +24,7 @@ fun NotificationManager.sendNotification(
         .setSmallIcon(R.mipmap.ic_launcher)
         .setContentTitle(title)
         .setContentText(message)
+        .addAction(R.drawable.birthday, "HOLA",InteractiveNotificationBroadcastReceiver.newPendingIntent(applicationContext))
         .setPriority(NotificationCompat.PRIORITY_HIGH)
 
     when(channel){
